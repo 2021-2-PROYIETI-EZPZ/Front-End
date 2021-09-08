@@ -11,6 +11,8 @@ In the **Front-End** repository, all the source code related solely and exclusiv
 
 ## Link to the Continuous Integration System (Circle CI)
 
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2021-2-PROYIETI-EZPZ/Front-End)
+
 ## Link to Codacy
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/12e65834727f4e229914321b5aba0537)](https://www.codacy.com/gh/2021-2-PROYIETI-EZPZ/Front-End/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=2021-2-PROYIETI-EZPZ/Front-End&amp;utm_campaign=Badge_Grade)
