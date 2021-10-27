@@ -9,6 +9,10 @@ In the **Front-End** repository, all the source code related solely and exclusiv
 * [Project Main Repository](https://github.com/2021-2-PROYIETI-EZPZ/Project).
 * [Project Back-End](https://github.com/2021-2-PROYIETI-EZPZ/Back-End).
 
+## Link to the application on Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://ezbrowser-frontend.herokuapp.com/)
+
 ## Link to the Continuous Integration System (Circle CI)
 
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2021-2-PROYIETI-EZPZ/Front-End)
