@@ -42,13 +42,13 @@ class NewTask extends Component {
                 <Card className={classes.card} variant="outlined">
                     <CardContent>
                         <form>
-                        <h3>Create New Task</h3>
+                        <h3>Create New Product</h3>
                         <br/>
                         <br/>
                         <div>
                             <div>
                                 <label htmlFor="text" className="right-margin">
-                                    Description
+                                    Name
                                 </label>
                             </div>
                             <br/>
@@ -66,38 +66,33 @@ class NewTask extends Component {
                         <br/>
                         <br/>
                         <div>
+                            <label htmlFor="text" className="right-margin">
+                                Price
+                            </label>
+                        </div>
+                        <br/>
+                        <TextField
+                            required
+                            id="standard-number"
+                            type="text"
+                            value={this.state.responsable}
+                            className={classes.textField}
+                            variant="outlined"
+                            onChange={this.handleresponsableChange}
+                            InputLabelProps={{
+                            shrink: true,
+                            }}
+                        />
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
                             <div>
                                 <label htmlFor="text" className="right-margin">
-                                    Responsable
+                                    Seller Email
                                 </label>
                             </div>
-                            <br/>
-                                    <div>
-                                        <label htmlFor="text" className="right-margin">
-                                            <th>Name</th>
-                                        </label>
-                                    </div>
-                                    <br/>
-                                        <TextField
-                                            required
-                                            id="standard-number"
-                                            type="text"
-                                            value={this.state.responsable}
-                                            className={classes.textField}
-                                            variant="outlined"
-                                            onChange={this.handleresponsableChange}
-                                            InputLabelProps={{
-                                                shrink: true,
-                                            }}
-                                        />
-                                    <br/>
-                                    <br/>
-                                    <div>
-                                        <label htmlFor="text" className="right-margin">
-                                            <th>Email</th>
-                                        </label>
-                                    </div>
-                                    <br/>
+                            <br/>  
                                         <TextField
                                             required
                                             id="standard-number222"
@@ -116,7 +111,7 @@ class NewTask extends Component {
                         <div>
                             <div>
                                 <label htmlFor="text" className="right-margin">
-                                    Status
+                                    Product Status
                                 </label>
                             </div>
                             <br/>
@@ -142,7 +137,7 @@ class NewTask extends Component {
                         <div>
                             <div>
                                 <label htmlFor="text" className="right-margin">
-                                    Date
+                                    Product Publication Date
                                 </label>
                             </div>
                             <br/>
@@ -168,7 +163,7 @@ class NewTask extends Component {
                             color="primary"
                             onClick ={this.handleSubmit}
                         >
-                            Create New Task
+                            Create New Product
                         </Button>
                     </form>
                     </CardContent>

@@ -12,17 +12,12 @@ import AutorenewIcon from '@material-ui/icons/Autorenew';
 import AlarmOnIcon from '@material-ui/icons/AlarmOn';
 
 const items = [
-    {description: "Wake me up.",responsible: {name: "Marcela Daza",email: "marcela.daza@gmail.com"},status: "Ready",dueDate: "10/26/2021"},
-    {description: "Take a shower.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "Ready",dueDate: "10/26/2021"},
-    {description: "Make the bed.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "Ready",dueDate: "10/26/2021"},
-    {description: "Cook my breakfast.",responsible: {name: "Marcela Daza",email: "marcela.daza@gmail.com"},status: "Completed",dueDate: "10/26/2021"},
-    {description: "Take me to school.",responsible: {name: "Arlex Toro",email: "arlex.toro@yahoo.com"},status: "Completed",dueDate: "10/26/2021"},
-    {description: "Go to Math class.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "Completed",dueDate: "10/26/2021"},
-    {description: "Play Soccer.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "Completed",dueDate: "10/26/2021"},
-    {description: "Take me Home.",responsible: {name: "Arlex Toro",email: "arlex.toro@yahoo.com"},status: "In Progress",dueDate: "10/26/2021"},
-    {description: "Do Math homework.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "In Progress",dueDate: "10/26/2021"},
-    {description: "Cook my dinner.",responsible: {name: "Mauricio Toro",email: "mauricio.toro@outlook.com"},status: "In Progress",dueDate: "10/26/2021"},
-    {description: "Go to sleep.",responsible: {name: "Alejandro Toro",email: "alejandro@outlook.com"},status: "In Progress",dueDate: "10/26/2021"},
+    {description: "iPhone 11",responsible: {name: "$ 299.99 USD",email: "comprador@ezbrowser.com"},status: "Completed",dueDate: "10/23/2021"},
+    {description: "Uniq Fuele Mini PowerBank.",responsible: {name: "$ 20.99 USD",email: "comprador@ezbrowser.com"},status: "Completed",dueDate: "10/26/2021"},
+    {description: "NVIDIA GeForce RTX 3090",responsible: {name: "$ 3,744.90 USD",email: "comprador@ezbrowser.com"},status: "Ready",dueDate: "10/28/2021"},
+    {description: "Vestido Púrpura",responsible: {name: "$ 129.99 USD",email: "comprador@ezbrowser.com"},status: "Ready",dueDate: "10/28/2021"},
+    {description: "Tenis Runfalcon",responsible: {name: "$ 62.99 USD",email: "comprador@ezbrowser.com"},status: "In Progress",dueDate: "10/30/2021"},
+    {description: "Pantalones Ajustados",responsible: {name: "$ 29.99 USD",email: "comprador@ezbrowser.com"},status: "In Progress",dueDate: "11/02/2021"}
 ]
 
 if(!localStorage.getItem('items')){  

@@ -37,8 +37,8 @@ class Login extends Component{
         }else{
             this.setState({isLoggedIn: false});
         }
-        localStorage.setItem('email', "alejandro@outlook.com");
-        localStorage.setItem('password', "aletoro123");
+        localStorage.setItem('email', "admin@ezbrowser.com");
+        localStorage.setItem('password', "admin123");
     }
 
     handleChange(e) {
@@ -81,7 +81,7 @@ class Login extends Component{
                         <Avatar className="avatar">
                             <AssignmentIndIcon />
                         </Avatar>
-                        <Typography variant="h2">React Task Planner</Typography>
+                        <Typography variant="h2">Ez Browser</Typography>
                         <form className="form">
                             <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="email">Email</InputLabel>
@@ -126,8 +126,8 @@ class Login extends Component{
                             </Button>
                         </form>
 
-                        <Typography variant="h6">Email: alejandro@outlook.com</Typography>
-                        <Typography variant="h6">Password: aletoro123</Typography>
+                        <Typography variant="h6">Email: admin@ezbrowser.com</Typography>
+                        <Typography variant="h6">Password: admin123</Typography>
                     </Paper>
                 </main>
             </React.Fragment>
