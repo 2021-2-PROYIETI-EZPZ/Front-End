@@ -21,6 +21,10 @@
     "serve": "^11.3.2",
     "sweetalert2": "^9.17.1"
   },
+  "engines": {
+  "node": "16.11.0",
+  "npm": "8.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "react-scripts start",
