@@ -37,8 +37,8 @@ class Login extends Component{
         }else{
             this.setState({isLoggedIn: false});
         }
-        localStorage.setItem('email', "admin@ezbrowser.com");
-        localStorage.setItem('password', "admin123");
+        localStorage.setItem('email', "mercadoLibre@ml.com");
+        localStorage.setItem('password', "mercadolb123");
     }
 
     handleChange(e) {
@@ -125,9 +125,6 @@ class Login extends Component{
                                 Login
                             </Button>
                         </form>
-
-                        <Typography variant="h6">Email: admin@ezbrowser.com</Typography>
-                        <Typography variant="h6">Password: admin123</Typography>
                     </Paper>
                 </main>
             </React.Fragment>
