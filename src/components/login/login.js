@@ -1,6 +1,6 @@
 import React from 'react';
 import './login.css';
-import { withStyles, TextField, MenuItem, Button } from '@material-ui/core';
+import { withStyles, TextField, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import HowToRegIcon from '@material-ui/icons/HowToReg';
 import logo from '../../logo.png';
@@ -54,7 +54,7 @@ class Login extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { loginConfirm: true, user: '', password: '', rol: '', dashboardVendedor: false, dashboardCliente: false, showPassword: false };
+        this.state = { loginConfirm: true, user: '', password: '', dashboardVendedor: false, dashboardCliente: false, showPassword: false };
     }
 
     componentWillUnmount() {
@@ -73,11 +73,6 @@ class Login extends React.Component {
         });
     };
 
-    handleRolChange = (e) => {
-        this.setState({
-            rol: e.target.value
-        });
-    };
     handleClickShowPassword = () => {
         this.setState({ showPassword: !this.state.showPassword });
     }
@@ -86,13 +81,8 @@ class Login extends React.Component {
         const { history } = this.props;
         this.setState({ loginConfirm: false });
         let redirrect = "";
-        if (this.state.rol && this.state.user && this.state.password) {
-            if (this.state.rol === 'cliente') {
-                redirrect = '/clientDashboard';
-            } else {
-                redirrect = '/sellerDashboard';
-            }
-            let rol = this.state.rol;
+        if (this.state.user && this.state.password) {
+            redirrect = '/clientDashboard';
             await axios.post('https://ezbrowser.herokuapp.com/auth/login', {
                 username: this.state.user,
                 password: this.state.password,
@@ -103,7 +93,7 @@ class Login extends React.Component {
                     if (response.status === 200) {
                         await Swal.fire(
                             'Bienvenid@ ',
-                            'Será redireccionado al dashboard de ' + rol,
+                            'Será redireccionado al dashboard de Cliente',
                             'success'
                         )
                         // guardar token e username logueado en localestorage
@@ -188,15 +178,7 @@ class Login extends React.Component {
 
                             </div >
                             <br></br>
-                            <div>
-                                <TextField variant="outlined" id="select" label="Rol" select required fullWidth
-                                    onChange={this.handleRolChange}>
-                                    <MenuItem value="pasajero">Cliente</MenuItem>
-                                    <MenuItem value="conductor">Vendedor</MenuItem>
-                                </TextField>
-                            </div>
                         </div>
-                        <br></br>
                         <br></br>
                         <br></br>
                         <Box m="auto">
