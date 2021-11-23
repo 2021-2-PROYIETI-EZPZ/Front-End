@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import HowToRegIcon from '@material-ui/icons/HowToReg';
 import logo from '../../logo.png';
 import axios from 'axios';
-import Swal from 'sweetalert2';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
@@ -16,6 +15,7 @@ import FormControl from '@material-ui/core/FormControl';
 import clsx from 'clsx';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Box from '@material-ui/core/Box';
+import Swal from 'sweetalert2';
 
 const styles = theme => ({
     paper: {
@@ -54,7 +54,7 @@ class Login extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { loginConfirm: true, user: '', password: '', dashboardVendedor: false, dashboardCliente: false, showPassword: false };
+        this.state = { url: 'https://ezbrowser.herokuapp.com/ezpz/v1/client/', loginConfirm: true, email: '', password: '', dashboardCliente: false, showPassword: false };
     }
 
     componentWillUnmount() {
@@ -63,7 +63,7 @@ class Login extends React.Component {
 
     handleUserChange = (e) => {
         this.setState({
-            user: e.target.value
+            email: e.target.value
         });
     };
 
@@ -78,54 +78,28 @@ class Login extends React.Component {
     }
 
     handleSubmit = async () => {
-        const { history } = this.props;
         this.setState({ loginConfirm: false });
-        let redirrect = "";
-        if (this.state.user && this.state.password) {
-            redirrect = '/clientDashboard';
-            await axios.post('https://ezbrowser.herokuapp.com/auth/login', {
-                username: this.state.user,
-                password: this.state.password,
-                token: ""
+        console.log(this.state.email);
+        console.log(this.state.password);
+        await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/client/login',{            
+            params: {
+                email: this.state.email, 
+                password: this.state.password
+            },
+        })
+            .then(async function (response) {
+                //console.log(response.data);
+                if (response.data === true){
+                    window.location.replace("https://ezbrowser-frontend.herokuapp.com/RegisterUser");
+                }
+            }).catch(function (error){
+                console.log(error);
+                Swal.fire(
+                    'Datos ingresados erróneamente',
+                    'Por favor verifique nuevamente los datos ingresados',
+                    'error'
+                )
             })
-                .then(async function (response) {
-                    // console.log(response.data);
-                    if (response.status === 200) {
-                        await Swal.fire(
-                            'Bienvenid@ ',
-                            'Será redireccionado al dashboard de Cliente',
-                            'success'
-                        )
-                        // guardar token e username logueado en localestorage
-                        var user = response.data;
-                        await localStorage.setItem('user', JSON.stringify(user));
-                        // redireccionar
-                        history.push(redirrect);
-                    } else {
-                        Swal.fire(
-                            'Datos ingresados erróneamente',
-                            'Por favor verifique nuevamente los datos ingresados',
-                            'error'
-                        )
-
-                    }
-
-                }).catch(function (error) {
-                    console.log(error);
-                    Swal.fire(
-                        'Datos ingresados erróneamente',
-                        'Por favor verifique nuevamente los datos ingresados',
-                        'error'
-                    )
-                });
-
-        } else {
-            Swal.fire(
-                'Datos ingresados erróneamente',
-                'Por favor verifique nuevamente los datos ingresados',
-                'error'
-            )
-        }
         this.setState({ loginConfirm: true });
     };
 
