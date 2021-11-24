@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RegisterUser from './components/Register_user/RegisterUser';
 import Home from './components/home/Home';
 import Login from './components/login/login';
+import LoginAdmin from './components/LoginAdmin/loginAdmin';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path='/home' element={<Home/>} ></Route>
             <Route path='/RegisterUser' element={<RegisterUser/>} ></Route>
             <Route path='/login' element={<Login/>} ></Route>
+            <Route path='/loginAdmin' element={<LoginAdmin/>} ></Route>
             <Route path="*" element={<Home/>} />
           </Routes>
         </BrowserRouter>
