@@ -23,14 +23,24 @@ class loginAdmin extends React.Component
 
 	handleSubmit = async () => {
         this.setState({ loginConfirm: false });
+		console.log("Antes del POST");
         await axios.post(this.state.url + 'loginAdmin',{            
             email: this.state.email, 
             password: this.state.password,
         })
             .then(async function (response) {
-                if (response.data === true){
-					console.log("Funciona :3");
-                    window.location.replace("http://localhost:3000/");
+				console.log("Después del then");
+				console.log(response.data);
+				console.log(response);
+                if (response.status === 200){
+					Swal.fire(
+						'Datos ingresados correctamente',
+  						'Haz iniciado sesión',
+  						'success'
+					)
+					//console.log("Funciona :3");
+					window.location.href = "http://localhost:3000/homeAdmin";
+                    //window.location.replace("http://localhost:3000/");
                 }
             }).catch(function (error){
                 console.log(error);
