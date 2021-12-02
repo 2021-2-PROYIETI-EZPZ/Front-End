@@ -8,6 +8,9 @@ import Home from './components/home/Home';
 import Login from './components/login/login';
 import LoginAdmin from './components/LoginAdmin/loginAdmin';
 import HomeAdmin from './components/homeAdmin/homeAdmin';
+import { Search } from './components/search/Search';
+import { DataProvider } from '../src/context/DataProvider'
+import "boxicons";
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +20,7 @@ class App extends Component {
 
   render() {
     return (
+      <DataProvider>
       <div className="App">
         {/* HACK reload stiles to diferent view forceRefresh={true}*/}
         <BrowserRouter forceRefresh={true}>
@@ -27,10 +31,13 @@ class App extends Component {
             <Route path='/login' element={<Login/>} ></Route>
             <Route path='/loginAdmin' element={<LoginAdmin/>} ></Route>
             <Route path='/homeAdmin' element={<HomeAdmin/>} ></Route>
+            <Route path='/search' element={<Search />} ></Route>
             <Route path="*" element={<Home/>} />
           </Routes>
         </BrowserRouter>
       </div>
+      </DataProvider>
+
     );
   }
 }
