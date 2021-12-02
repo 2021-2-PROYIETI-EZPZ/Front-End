@@ -5,7 +5,7 @@ class loginAdmin extends React.Component
     render(){
     return (
         <div>
-            Sitio principal del admin
+            Sitio principal del Sáenz
         </div>
     );
     }
