@@ -96,7 +96,7 @@ class Login extends React.Component {
             .then(async function (response) {
                 //console.log(response.data);
                 if (response.data === true){
-                    window.location.replace("http://localhost:3000/search");
+                    window.location.replace("https://ezbrowser.herokuapp.com/ezpz/v1/client/search");
                 }
             }).catch(function (error){
                 console.log(error);
