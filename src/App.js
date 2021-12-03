@@ -25,7 +25,7 @@ class App extends Component {
         {/* HACK reload stiles to diferent view forceRefresh={true}*/}
         <BrowserRouter forceRefresh={true}>
           <Routes>
-            <Route path='/' element={<Home/>} ></Route>
+            <Route path='/' element={<Search/>} ></Route>
             <Route path='/home' element={<Home/>} ></Route>
             <Route path='/RegisterUser' element={<RegisterUser/>} ></Route>
             <Route path='/login' element={<Login/>} ></Route>

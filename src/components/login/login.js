@@ -81,6 +81,12 @@ class Login extends React.Component {
         this.setState({ loginConfirm: false });
         console.log(this.state.email);
         console.log(this.state.password);
+
+        sessionStorage.setItem("correo", this.state.email);
+        let correo = sessionStorage.getItem("correo")
+        console.log("usuarios: "+correo);
+         
+
         await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/client/login',{            
             params: {
                 email: this.state.email, 
@@ -90,7 +96,7 @@ class Login extends React.Component {
             .then(async function (response) {
                 //console.log(response.data);
                 if (response.data === true){
-                    window.location.replace("https://ezbrowser-frontend.herokuapp.com/search");
+                    window.location.replace("http://localhost:3000/search");
                 }
             }).catch(function (error){
                 console.log(error);
