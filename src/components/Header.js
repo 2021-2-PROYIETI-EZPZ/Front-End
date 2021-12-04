@@ -33,14 +33,15 @@ export const Header = () => {
         </Link>
         <ul>
           <li>
-            <Link to="/login">hola ${correo}</Link>
+            <a>hola ${correo}</a>
           </li>
           <li>
-            <Link to="/RegisterUser">Update</Link>
+            <Link to="/update">update</Link>
           </li>
           <li>
             <Link to="/home">Acerca de</Link>
           </li>
+
           <li>
             <button onClick={() => cerrarSesion()} className="btn btn-light">Cerrar Sesión</button>
           </li>

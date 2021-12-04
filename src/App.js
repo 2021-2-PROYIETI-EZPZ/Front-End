@@ -8,6 +8,7 @@ import Home from './components/home/Home';
 import Login from './components/login/login';
 import LoginAdmin from './components/LoginAdmin/loginAdmin';
 import HomeAdmin from './components/homeAdmin/homeAdmin';
+import Update from './components/updateClient/updateClient';
 import { Search } from './components/search/Search';
 import { DataProvider } from '../src/context/DataProvider'
 import "boxicons";
@@ -32,7 +33,8 @@ class App extends Component {
             <Route path='/loginAdmin' element={<LoginAdmin/>} ></Route>
             <Route path='/homeAdmin' element={<HomeAdmin/>} ></Route>
             <Route path='/search' element={<Search />} ></Route>
-            <Route path="*" element={<Home/>} />
+            <Route path='/update' element={<Update />} ></Route>
+            <Route path="*" element={<Search/>} />
           </Routes>
         </BrowserRouter>
       </div>
