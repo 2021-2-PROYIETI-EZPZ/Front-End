@@ -33,7 +33,7 @@ export const Header = () => {
         </Link>
         <ul>
           <li>
-            <a>hola ${correo}</a>
+            <a>hola {correo}</a>
           </li>
           <li>
             <Link to="/update">update</Link>
