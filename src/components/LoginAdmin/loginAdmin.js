@@ -7,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 class loginAdmin extends React.Component 
 {
-	state = { url: 'http://localhost:8080/ezpz/v1/auth/', loginConfirm: true, email: '', password: '', dashboardAdmin: false, showPassword: false };
+	state = { url: 'https://ezbrowser.herokuapp.com/ezpz/v1/auth/', loginConfirm: true, email: '', password: '', dashboardAdmin: false, showPassword: false };
 
 	handleUserChange = (e) => {
         this.setState({
@@ -38,8 +38,7 @@ class loginAdmin extends React.Component
   						'Haz iniciado sesión',
   						'success'
 					)
-					//console.log("Funciona :3");
-					window.location.href = "http://localhost:3000/homeAdmin";
+					window.location.href = "https://ezbrowser.herokuapp.com/ezpz/homeAdmin";
                     //window.location.replace("http://localhost:3000/");
                 }
             }).catch(function (error){

@@ -96,3 +96,9 @@ tbody tr:hover {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#menu {
+  height: 52px;
+  width: 968px;
+  background-color: #301bc6;
+  }

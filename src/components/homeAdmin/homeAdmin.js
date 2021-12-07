@@ -53,7 +53,7 @@ const DefaultCardContents = ({ children }) => (
   <React.Fragment>
     <FrontSide
       style={{
-        backgroundColor: '#41669d',
+        backgroundColor: '#301bc6',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column'
@@ -72,7 +72,7 @@ const DefaultCardContents = ({ children }) => (
     </FrontSide>
     <BackSide
       style={{
-        backgroundColor: '#175852',
+        backgroundColor: ' #6e1bc6',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -201,9 +201,9 @@ class homeAdmin extends React.Component{
   render(){
   return (
     <div className="container-homeAdmin">
-      <h1>
+      <div id="menu">
         Admin
-      </h1>
+      </div>
       <br/>
       <div className="Card">
         <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
