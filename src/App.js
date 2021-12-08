@@ -12,7 +12,7 @@ import Update from './components/updateClient/updateClient';
 import { Search } from './components/search/Search';
 import { DataProvider } from '../src/context/DataProvider'
 import "boxicons";
-import Pagos from './components/Pagos/pagos';
+import Pagos from './components/Pagos/App';
 
 class App extends Component {
   constructor(props) {
