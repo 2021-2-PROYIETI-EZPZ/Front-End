@@ -12,8 +12,8 @@ import {
 } from "@material-ui/icons";
 
 const Footer = () => <>
-    <Grid container justify="center" style={{ minHeight: "212px" }}>
-        <Grid container item sm={6} xs={11} justify="space-between">
+    <Grid container justify="center" style={{ minHeight: "20px" }}>
+        <Grid container item sm={55} xs={11} justify="space-between">
             <Grid item sm={5} xs={12}>
                 <Security color="action" />
                 <Typography paragraph>
@@ -28,9 +28,9 @@ const Footer = () => <>
             </Grid>
         </Grid>
     </Grid>
-    <AppBar position="static" elevation={0} component="footer" color="default">
+    <AppBar position="static" elevation={0} component="footer" color="primary">
         <Toolbar style={{ justifyContent: "center" }}>
-            <Typography variant="caption">©2020</Typography>
+            <Typography variant="caption">©2021</Typography>
         </Toolbar>
     </AppBar>
 </>

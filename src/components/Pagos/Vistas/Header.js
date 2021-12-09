@@ -10,7 +10,7 @@ import { makeStyles, } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     topAppBar: {
         Height: "20vh",
-        minHeight: "200px"
+        minHeight: "20px"
     },
     toolbar: {
         alignItems: "flex-start",
