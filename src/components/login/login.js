@@ -87,15 +87,21 @@ class Login extends React.Component {
         console.log("usuarios: "+correo);
          
 
-        await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/client/login',{            
+        //await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/client/login',{            
+        /*await axios.get('http://localhost:5000/ezpz/v1/auth/LoginClient',{            
             params: {
                 email: this.state.email, 
                 password: this.state.password
             },
+        })*/
+        await axios.post('https://ezbrowser.herokuapp.com/ezpz/v1/auth/loginClient',{  
+            email: this.state.email, 
+            password: this.state.password,
+
         })
             .then(async function (response) {
-                if (response.data === true){
-                    window.location.replace("https://ezbrowser-frontend.herokuapp.com/search");
+                if (response.status === 200){
+                    window.location.replace("https://ezbrowser.herokuapp.com/search");
                     //window.location.replace("http://localhost:3000/search");
                 }
             }).catch(function (error){

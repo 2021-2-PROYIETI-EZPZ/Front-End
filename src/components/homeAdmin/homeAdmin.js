@@ -121,10 +121,16 @@ function ProductTable(props) {
     }
     return sortConfig.key === name ? sortConfig.direction : undefined;
   };
+  //<body onLoad = {this.connectionWithBack}>
+
+  const connectionWithBack = name => {
+    console.log("Llegó al método");
+    //await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/membership')
+  };
 
   return (
-    <div>
-      <table>
+    <div >
+      <table onLoad = {connectionWithBack}>
       <caption>Ez Browser</caption>
       <thead>
         <tr>
@@ -171,7 +177,6 @@ function ProductTable(props) {
   );
 }
 
-//export default function homeAdmin() {
 class homeAdmin extends React.Component{
 
   constructor(props) {
@@ -181,60 +186,42 @@ class homeAdmin extends React.Component{
     };
   }
 
-
-  /*handleSubmit = async () => {
-    this.setState({ loginConfirm: false });
-    console.log(this.state.email);
-    console.log(this.state.password);
-    await axios.get('https://ezbrowser.herokuapp.com/ezpz/v1/membership',{
-    })
-        .then(async function (response) {
-            console.log(response);
-            /*if (response.data === true){
-                window.location.replace("https://ezbrowser-frontend.herokuapp.com/search");
-            }
-        }).catch(function (error){
-            console.log(error);
-        })
-    this.setState({ loginConfirm: true });
-  };*/
   render(){
   return (
-    <div className="container-homeAdmin">
-      <div id="menu">
-        Admin
-      </div>
-      <br/>
-      <div className="Card">
-        <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
-          <FlippyOnHover />
-          <ControlledFlippy
-            isFlipped={this.state.isFlipped}
-          /> 
+      <div className="container-homeAdmin">
+        <div id="menu">
+            <p style={{ color: 'white' }}>Admin</p>
+        </div>
+        <br/>
+        <div className="Card">
+          <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
+            <FlippyOnHover />
+            <ControlledFlippy
+              isFlipped={this.state.isFlipped}
+            /> 
+          </div>
+        </div>
+        <div >
+          <ProductTable
+            products={[
+              { id: 1, name: "El nombre de la membresía", price: "15.000", date: "1/12/2021" },
+              { id: 2, name: "El nombre de la membresía", price: "15.000", date: "31/12/2021" },
+              {
+                id: 3,
+                name: "El nombre de la membresía",
+                price: "15.000",
+                date: "11/12/2021"
+              },
+              {
+                id: 4,
+                name: "El nombre de la membresía",
+                price: "15.000",
+                date: "31/12/2021"
+              },            
+            ]}
+          />
         </div>
       </div>
-      <div >
-        <ProductTable
-          products={[
-            { id: 1, name: "El nombre de la membresía", price: "15.000", date: "1/12/2021" },
-            { id: 2, name: "El nombre de la membresía", price: "15.000", date: "31/12/2021" },
-            {
-              id: 3,
-              name: "El nombre de la membresía",
-              price: "15.000",
-              date: "11/12/2021"
-            },
-            {
-              id: 4,
-              name: "El nombre de la membresía",
-              price: "15.000",
-              date: "31/12/2021"
-            },
-            
-          ]}
-        />
-      </div>
-    </div>
   );
 }
 }
