@@ -101,7 +101,7 @@ class Login extends React.Component {
         })
             .then(async function (response) {
                 if (response.status === 200){
-                    window.location.replace("https://ezbrowser.herokuapp.com/search");
+                    window.location.replace("https://ezbrowser-frontend.herokuapp.com/search");
                     //window.location.replace("http://localhost:3000/search");
                 }
             }).catch(function (error){

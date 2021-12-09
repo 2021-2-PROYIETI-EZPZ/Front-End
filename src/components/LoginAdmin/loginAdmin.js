@@ -38,7 +38,7 @@ class loginAdmin extends React.Component
   						'Haz iniciado sesión',
   						'success'
 					)
-					window.location.href = "https://ezbrowser.herokuapp.com/homeAdmin";
+					window.location.href = "https://ezbrowser-frontend.herokuapp.com/homeAdmin";
                     //window.location.replace("http://localhost:3000/");
                 }
             }).catch(function (error){
