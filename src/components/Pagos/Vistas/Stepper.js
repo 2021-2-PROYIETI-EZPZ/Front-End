@@ -10,6 +10,9 @@ import {
 } from '@material-ui/core';
 import StepIconos from './StepIconos';
 import StepConector from './StepConnector';
+import DatosContacto from './forms/DatosContacto';
+import Membresia from './forms/Membresia';
+import Pagos from './forms/Formapagos';
 
 const style = makeStyles(theme => ({
     button: {marginRight: theme.spacing(1),},
@@ -25,6 +28,12 @@ const style = makeStyles(theme => ({
         height: "calc(10vh - 40px)",
         minHeight: "90px"
     },
+    form: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        width: "100%"
+    }
 }));
 
 const Steppers = () => {
@@ -52,24 +61,45 @@ const Steppers = () => {
                 alignItems="center"
                 style={{ height: "400px" }}
             >
-            </Grid>
+            
             {activeStep === 3
                 ?
                 <Button onClick={handleReset} className={classes.button}>
                     Reiniciar
                 </Button>
                 :
-                <>
-                    <Button disabled={activeStep === 0} className={classes.button} onClick={handleBack}>
-                        Atras
-                    </Button>
-                    <Button variant="contained" color="primary" className={classes.button} onClick={handleNext}>
-                        {activeStep === 2 ? 'Pagar' : 'Siguiente'}
-                    </Button>
-                </>
+
+                <form className={classes.form} onSubmit={e => { e.preventDefault(); handleNext() }}>
+                        <Grid container spacing={3}>
+                            <StepContent step={activeStep}/>
+                        <Grid container item justify="flex-end">
+                            <Button disabled={activeStep === 0} className={classes.button} onClick={handleBack}>
+                                Atras
+                            </Button>
+                            <Button variant="contained" color="primary" className={classes.button} onClick={handleNext}>
+                            {activeStep === 2 ? 'Pagar' : 'Siguiente'}
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </form>
             }
+            </Grid>
         </Box>
     </>
+}
+const StepContent = ({ step }) => {
+    switch (step) {
+        case 0:
+            return <DatosContacto/>;
+        case 1:
+            return <Membresia/>;
+        case 2:
+            return <Pagos/>;
+        default:
+            return <></>;
+
+    }
+
 }
 
 export default Steppers;
