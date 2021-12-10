@@ -35,8 +35,8 @@ class App extends Component {
             <Route path='/homeAdmin' element={<HomeAdmin/>} ></Route>
             <Route path='/search' element={<Search />} ></Route>
             <Route path='/update' element={<Update />} ></Route>
-                        <Route path="*" element={<Search />} />
-                        <Route path='/pagos' element={<Pagos />} />
+            <Route path="*" element={<Search />} ></Route>
+            <Route path='/pagos' element={<Pagos />} ></Route>
           </Routes>
         </BrowserRouter>
       </div>
