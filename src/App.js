@@ -12,7 +12,7 @@ import Update from './components/updateClient/updateClient';
 import { Search } from './components/search/Search';
 import { DataProvider } from '../src/context/DataProvider'
 import "boxicons";
-import Pagos from './components/Pagos/App';
+import PagosApp from './components/Pagos/pagosApp';
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class App extends Component {
             <Route path='/search' element={<Search />} ></Route>
             <Route path='/update' element={<Update />} ></Route>
             <Route path="*" element={<Search />} ></Route>
-            <Route path='/pagos' element={<Pagos />} ></Route>
+            <Route path='/pagos' element={<PagosApp />} ></Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -5,10 +5,10 @@ import Header from './Vistas/Header';
 import Foot from './Vistas/Foot';
 import Pagos from './Vistas/pago';
 
-const App = () => <ThemeProvider theme={theme}>
+const pagosApp = () => <ThemeProvider theme={theme}>
     <Header />
     <Pagos />
     <Foot />
 </ThemeProvider>
    
-export default App;
+export default pagosApp;
