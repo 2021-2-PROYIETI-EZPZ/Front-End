@@ -30,9 +30,9 @@ In the **Front-End** repository, all the source code related solely and exclusiv
 
 [Andres Jose Gutierrez Marin](https://github.com/JoseGutierrezMairn)
 
-[Rubian Camilo Saenz ](https://github.com/camilosaenz)
+[Rubian Camilo Saenz Rodriguez](https://github.com/camilosaenz)
 
-[Carlos Andres Amorocho Amorocho](https://github.com/Carlos96999)
+[Carlos Andres Amorocho ](https://github.com/Carlos96999)
 
 ## License and Copyrights
 **©** Alejandro Toro Daza, Rubian Camilo Saenz Rodriguez, Carlos Andres Amorocho Amorocho, Andres Jose Gutierrez Marin, Jonathan Fabian Paez Torres, Jairo Eduardo Pulido Rincon, Systems Engineering students of the [Colombian School of Engineering Julio Garavito](https://www.escuelaing.edu.co/es/).
