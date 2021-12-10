@@ -41,7 +41,7 @@ const Steppers = () => {
     const classes = style();
     const handleNext = () => setActiveStep(prevActiveStep => prevActiveStep + 1);
     const handleBack = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    const handleCancel = () => setActiveStep((0), window.location.replace("https://ezbrowser-frontend.herokuapp.com/search"));
+    const handleCancel = () => setActiveStep(window.location.replace("https://ezbrowser-frontend.herokuapp.com/search"));
 
     return <>
         <Stepper alternativeLabel className={classes.stepper} connector={<StepConector />} activeStep={ activeStep}>
