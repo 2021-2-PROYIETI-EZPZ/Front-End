@@ -28,9 +28,9 @@ In the **Front-End** repository, all the source code related solely and exclusiv
 
 [Jairo Eduardo Pulido Rincon](https://github.com/Killersys)
 
-[Andres Jose Gutierrez ](https://github.com/JoseGutierrezMairn)
+[Andres Jose Gutierrez Marin](https://github.com/JoseGutierrezMairn)
 
-[Rubian Camilo Saenz Rodriguez](https://github.com/camilosaenz)
+[Rubian Camilo Saenz ](https://github.com/camilosaenz)
 
 [Carlos Andres Amorocho Amorocho](https://github.com/Carlos96999)
 
