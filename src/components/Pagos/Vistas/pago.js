@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-const pagos = () => {
+const Pagos = () => {
 
     const classes = useStyles();
 
@@ -29,4 +29,4 @@ const pagos = () => {
     </Box>
 }
 
-export default pagos;
+export default Pagos;
