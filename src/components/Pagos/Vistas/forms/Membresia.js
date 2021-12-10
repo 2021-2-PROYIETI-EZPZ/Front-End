@@ -4,7 +4,6 @@ import {
     Grid,
     Typography
 } from "@material-ui/core";
-import { FormatAlignLeft } from '@material-ui/icons';
 
 const Membresia = () => {
 
