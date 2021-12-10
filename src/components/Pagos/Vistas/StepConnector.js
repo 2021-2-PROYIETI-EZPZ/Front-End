@@ -1,6 +1,6 @@
 import { withStyles, StepConnector } from "@material-ui/core";
 
-// STYLE THE STEPPER CONNECTOR
+// Estilo del conector de paso a paso
 const Connector = withStyles(theme => ({
     alternativeLabel: {
         top: 22,

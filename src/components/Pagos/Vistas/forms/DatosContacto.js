@@ -13,9 +13,10 @@ const DatosContacto = () => {
             <Typography variant="h6">Informacion de Contacto</Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
+            
             <TextField
                 label="Nombre"
-                name="nombre"
+                 name="nombre"
                 variant="outlined"
                 required
                 fullWidth

@@ -5,14 +5,14 @@ import Stepper from './Stepper';
 
 const useStyles = makeStyles(() => ({
     boxWrapper: {
-        marginBottom: "20px",
+        marginBottom: "10px",
         minHeight: "calc(26vh + 260px)"
     },
     container: {
         position: "relative",
         zIndex: "1100",
-        marginTop: "55px",
-        marginBottom: "55px",
+        marginTop: "45px",
+        marginBottom: "45px",
     }
 }));
 

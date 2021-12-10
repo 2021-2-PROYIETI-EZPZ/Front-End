@@ -40,6 +40,9 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/home">Acerca de</Link>
+                </li>
+                <li>
+            <Link to="/pagos">Membresia</Link>
           </li>
 
           <li>
@@ -89,7 +92,10 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/home">Acerca de</Link>
-          </li>
+                </li>
+                <li>
+                    <Link to="/login">Membresia</Link>
+                    </li>
         </ul>
         <div className="containerInput">
           <ul>

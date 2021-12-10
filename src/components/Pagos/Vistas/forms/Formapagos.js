@@ -10,11 +10,8 @@ const PaymentForm = () => {
 
     const cardsLogo = [
         "amex",
-        "cirrus",
         "diners",
-        "dankort",
-        "discover",
-        "jcb",
+        "colpatria",
         "maestro",
         "mastercard",
         "visa",
@@ -23,11 +20,11 @@ const PaymentForm = () => {
 
     return <>
         <Grid container item xs={12}>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={2}>
                 <Typography variant="h6">Datos de pago</Typography>
             </Grid>
             <Grid container item xs={12} sm={9} justify="space-between">
-                {cardsLogo.map(e => <img key={e} src={`./tarjetas/${e}.png`} alt={e} width="50px" align="bottom" style={{ padding: "0 5px" }} />)}
+                {cardsLogo.map(e => <img key={e} src={`./tarjetas/${e}.png`} alt={e} width="80px" align="bottom" style={{ padding: "0 5px" }} />)}
             </Grid>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -48,6 +45,16 @@ const PaymentForm = () => {
         </Grid>
         <Grid item xs={12} sm={9}>
             <TextField
+                label="Nombre del titular "
+                name="ntitular"
+                variant="outlined"
+                required
+                fullWidth
+                InputLabelProps={{ shrink: true }}
+            />
+        </Grid> <Grid item xs={12} sm={9}>
+            <TextField
+                
                 label="Numero Tarjeta "
                 name="ccnumero"
                 variant="outlined"

@@ -19,14 +19,14 @@ const style = makeStyles(theme => ({
     mainBox: {
         position: "relative",
         marginTop: "-8px",
-        padding: "10px 20px",
+        padding: "20px 20px",
         borderBottomRightRadius: "4px",
         borderBottomLeftRadius: "4px",
         background: theme.palette.background.default
     },
     stepper: {
         height: "calc(10vh - 40px)",
-        minHeight: "90px"
+        minHeight: "100px"
     },
     form: {
         display: "flex",
@@ -41,11 +41,11 @@ const Steppers = () => {
     const classes = style();
     const handleNext = () => setActiveStep(prevActiveStep => prevActiveStep + 1);
     const handleBack = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    const handleReset = () => setActiveStep(0);
+    const handleCancel = () => setActiveStep((0), window.location.replace("https://ezbrowser-frontend.herokuapp.com/search"));
 
     return <>
         <Stepper alternativeLabel className={classes.stepper} connector={<StepConector />} activeStep={ activeStep}>
-            {/* Change the number of loops here based on StepContent */}
+            {/* Solo tendremos tres pasos para el pago, en caso de necesitar mas se añade  */}
             {[1, 2, 3].map(e => (
                 <Step key={e}>
                     <StepLabel StepIconComponent={StepIconos}/>
@@ -61,25 +61,33 @@ const Steppers = () => {
                 alignItems="center"
                 style={{ height: "400px" }}
             >
-            
+                {/* Al llegar al ultimo paso, se activa un boton de enviar */}
             {activeStep === 3
-                ?
-                <Button onClick={handleReset} className={classes.button}>
-                    Reiniciar
+                    ?
+
+                <Button onClick={handleCancel} className={classes.button}>
+                        Tu pago ha sido exitoso! Haz clic aqui para volver al menu principal
                 </Button>
                 :
 
                 <form className={classes.form} onSubmit={e => { e.preventDefault(); handleNext() }}>
                         <Grid container spacing={3}>
                             <StepContent step={activeStep}/>
-                        <Grid container item justify="flex-end">
+                            <Grid container item justify="flex-end">
+                                <Button enable={activeStep == 0} className={classes.button} onClick={handleCancel}>
+                                    Cancelar
+                                </Button>
+
                             <Button disabled={activeStep === 0} className={classes.button} onClick={handleBack}>
                                 Atras
-                            </Button>
+                                </Button>
+
                             <Button variant="contained" color="primary" className={classes.button} onClick={handleNext}>
                             {activeStep === 2 ? 'Pagar' : 'Siguiente'}
-                            </Button>
-                        </Grid>
+                                </Button>
+                                
+                            </Grid>
+                            
                     </Grid>
                 </form>
             }
@@ -87,6 +95,7 @@ const Steppers = () => {
         </Box>
     </>
 }
+//Se conecta el contenido del paso a paso
 const StepContent = ({ step }) => {
     switch (step) {
         case 0:
